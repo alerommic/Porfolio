@@ -18,14 +18,9 @@
 body {
   background-color:#53524e;
   font-family: roboto;
+  max-width: 1080px;
+  margin:auto;
 }
-
-/*
-.color1 { #5eeefd };
-.color2 { #7bf2fe };
-.color3 { #98f7fe };
-.color4 { #b4fbff };
-.color5 { #d1ffff };*/
 
 header {
   text-align: center;
@@ -34,10 +29,10 @@ header {
 nav {
   position: sticky;
   margin: 10px;
-  background-color: #53524e;
+  background-color: #666561;
   box-shadow:rgba(0, 0, 0, 0.2) 0px 10px 8px;
   border-radius:10px;
-  top: 10px;;
+  top: 10px;
 }
 
 nav ul {
@@ -45,7 +40,8 @@ nav ul {
   flex-wrap: wrap;
   list-style: none;
   align-items: stretch;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  padding: 0px;
 }
 nav ul li {
   border-radius:10px;
@@ -53,8 +49,22 @@ nav ul li {
 }
 
 nav ul li a {
-  color:white;
+  display: block;
+  padding: 1em;
+  transition:color 0.3s;
+  color:#f5f4efbc;
   text-decoration: none;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+nav ul li a:hover {
+  color: white;
+  transition:color 0.3s;
 }
 
 main {
@@ -73,16 +83,24 @@ main {
   grid-area: about;
 }
 
+h5 {
+  text-align: center;
+}
+
 section {
+  text-align: justify;
   color: #333;
   padding: 1em;
+  box-shadow:rgba(0, 0, 0, 0.2) 0px 10px 8px;
   border-radius:10px;
   background-color:  #f5f4ef;
 }
 
 aside {
+  color: #333;
   background-color:  #f5f4ef;
   padding: 1em;
+  box-shadow:rgba(0, 0, 0, 0.2) 0px 10px 8px;
   border-radius:10px;
 }
 
@@ -90,8 +108,8 @@ section h2:first-child {
   text-align: center;
 }
 
-#proyects{
-  grid-area: proyects;
+#projects{
+  grid-area: projects;
 }
 
 #education{
@@ -119,5 +137,30 @@ section h2:first-child {
 
 #footer{
   grid-area: footer;
+  color: #333;
+  background-color:  #f5f4ef;
+  padding: 1em;
+  box-shadow:rgba(0, 0, 0, 0.2) 0px 10px 8px;
+  border-radius:10px;
+}
 
+@media (max-width: 450px) {
+  main {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+          "about about"
+          "projects projects"
+          "experience experience"
+          "education education"
+          "skills skills"
+          "contact contact"
+          "footer footer";
+          gap: 1em;
+  }
+
+  nav ul{
+    padding: 0;
+  }
 }
