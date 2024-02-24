@@ -1,4 +1,123 @@
+
+@font-face {
+  font-family: roboto;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: roboto;
+  src: url(../fonts/Roboto-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: roboto;
+  src: url(../fonts/Roboto-Italic.ttf);
+  font-style: italic;
+}
+
+
 body {
-    max-width:75ch;
-    margin: auto;
+  background-color:#53524e;
+  font-family: roboto;
+}
+
+/*
+.color1 { #5eeefd };
+.color2 { #7bf2fe };
+.color3 { #98f7fe };
+.color4 { #b4fbff };
+.color5 { #d1ffff };*/
+
+header {
+  text-align: center;
+  color: #f5f4ef;
+}
+nav {
+  position: sticky;
+  margin: 10px;
+  background-color: #53524e;
+  box-shadow:rgba(0, 0, 0, 0.2) 0px 10px 8px;
+  border-radius:10px;
+  top: 10px;;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+nav ul li {
+  border-radius:10px;
+  padding: 1em;
+}
+
+nav ul li a {
+  color:white;
+  text-decoration: none;
+}
+
+main {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-areas:
+        "about about contact"
+        "projects experience contact"
+        "education skills contact"
+        "footer footer footer";
+        gap: 1em;
+}
+
+#about{  
+  grid-area: about;
+}
+
+section {
+  color: #333;
+  padding: 1em;
+  border-radius:10px;
+  background-color:  #f5f4ef;
+}
+
+aside {
+  background-color:  #f5f4ef;
+  padding: 1em;
+  border-radius:10px;
+}
+
+section h2:first-child {
+  text-align: center;
+}
+
+#proyects{
+  grid-area: proyects;
+}
+
+#education{
+  grid-area: education;
+}
+
+#experience{
+  grid-area: experience;
+}
+
+#skills {
+  grid-area: skills;
+}
+
+#skills ul {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+
+#contact{
+  grid-area: contact;
+}
+
+#footer{
+  grid-area: footer;
+
 }
