@@ -61,6 +61,10 @@ a {
   text-decoration: none;
   color: #000;
 }
+a:hover{
+  transition:color 0.3s;
+  color:#646262;
+}
 
 nav ul li a:hover {
   color: white;
@@ -97,11 +101,17 @@ section {
 }
 
 aside {
+  text-align: justify;
   color: #333;
   background-color:  #f5f4ef;
   padding: 1em;
   box-shadow:rgba(0, 0, 0, 0.2) 0px 10px 8px;
   border-radius:10px;
+}
+
+aside ul li{
+  list-style: none;
+  margin-bottom: 1em;
 }
 
 section h2:first-child {
@@ -135,6 +145,11 @@ section h2:first-child {
   grid-area: contact;
 }
 
+#contact h2 {
+text-align: center;
+}
+
+
 #footer{
   grid-area: footer;
   color: #333;
@@ -162,5 +177,10 @@ section h2:first-child {
 
   nav ul{
     padding: 0;
+  }
+
+  nav {
+    position:relative; 
+    /*no se si es la mejor solución pero el sticky en moviles tapa demasiado la pantalla.*/
   }
 }
